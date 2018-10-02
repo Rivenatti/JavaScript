@@ -1,0 +1,105 @@
+//-------------- JAVASCRIPT USAGE --------------
+let reg = new Regex('a');
+OR
+let reg = /a/;
+
+//-------------- FLAGS --------------
+
+/''/g	// global 			- return all matches
+/''/m	// multi line 		- ^ and $ match start/end of line
+/''/i	// insensitive 		- case insensitive match
+/''/x 	// extended 		- ignore white space
+/''/X	// extra 			- disallow meaningless escapes
+/''/s 	// single line 		- dot matches new line
+/''/u	// unicode 			- match with full unicode
+/''/U	// ungreedy 		- make quantifiers lazy
+/''/A	// anchored 		-anchor to start of pattern
+/''/J	// Jchanged 		- allow duplicate subpattern names
+/''/D	// dollar end only 	- $matches only end of pattern
+
+//-------------- MATCH TYPES --------------
+
+/\w/ 			// match alphanumeric character
+/\W/ 			// match non alphanumeric character
+/\d/			// match any digit character
+/\D/ 			// math non numeric character
+/\s/ 			// math any white space
+/\S/ 			// math non white space
+/\t/			// match a tab character only
+
+/[a-z]/ 		// match any alfabet character from a to z
+/[0-9]/ 		// match any number from 0 to 9
+/a{1,}/; 		// match any number of 'a'
+/a{1, 9}/; 		// {min, max} amount of characters
+/a.c/; 			// dot - match any character
+/a.+c/; 		// dot+c - match any characters
+/[^a]b			// escape letter 'a' at the beginning
+/a(b|c)/		// match ab or ac
+
+//-------------- SPECIAL CHARACTERS --------------
+
+/+/		// The one or more qualifier
+/\/		// The escape character
+/[]/	// The character set
+/[^]/	// The negative simbol in a character set
+/?/		// The zero or more qualifier (next char is optional)
+/./		// Match exacly any single character (except the newline character)
+/*/		// Match any characters
+
+//-------------- EXAMPLES --------------
+
+//***************************************
+let reg = /a/g;
+
+reg.test('a') 	// true
+reg.test('aa') 	// true
+reg.test('aA') 	// false
+
+// **************************************
+
+reg = /a/i;
+reg.test('aA') 	// true
+
+//***************************************
+
+/\d\d-\d\d-\d\d\d\d/  // date 
+
+
+
+
+/0(12|21)/ 			// match 012 or 021
+
+
+
+
+/[^java]script/		// don't match 'java'
+
+
+
+[a-zA-z]word		// match both upper and lower case letters
+
+
+
+/[0-9]+/			// match at least one number from 0-9
+
+
+
+/[0-9]{11}/			// match 11 numbers in a row
+/[a-z]{11}/			// match 11 letter word
+
+/[a-z]{5}/			// match word with length of 5 characters long
+/[a-z]{5,}/			// match word with length at least 5 characters long
+/[a-z]{5,8}/		// match word with length from 5 to 8 characters long
+
+
+
+/\w{3}\s\d{5}		// for example: "123 hello"
+
+
+
+/.+/				// infinite any character expression
+
+
+
+/^[a-z]{5}/			// start with 5 alphabatic characters
+/[a-z]{5}$/			// end with 5 alphabatic characters
