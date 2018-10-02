@@ -1,5 +1,5 @@
 //-------------- JAVASCRIPT USAGE --------------
-let reg = new Regex('a');
+let reg = new Regex(/[a-z]/, 'g');
 OR
 let reg = /a/;
 
