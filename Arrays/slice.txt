@@ -1,0 +1,35 @@
+//----- THEORY
+// array.slice(start, end); - returns elements as a new array object
+// start - at what position start selecting
+// end - at what position end selectiong (not including end argument!)
+
+//----- EXAMPLES -----
+
+let parts = ["Case", "Procesor", "Motherboard", "RAM"];
+
+// Return whole array as a new object
+console.log(parts);
+let newArray = parts.slice(); 
+console.log('slice()', newArray);
+
+console.log('----------------------------------');
+
+// Return first element from the array
+console.log(parts);
+newArray = parts.slice(1, 2);
+console.log('slice(1, 2)', newArray);
+
+console.log('----------------------------------');
+
+// Return last element from the array
+console.log(parts);
+newArray = parts.slice(-1);
+console.log('slice(-1)', newArray);
+
+console.log('----------------------------------');
+
+// Return array without last element
+console.log(parts);
+newArray = parts.slice(0, parts.length - 1);
+console.log('slice(0, parts.length - 1)', newArray);
+
