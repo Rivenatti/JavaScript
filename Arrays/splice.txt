@@ -1,0 +1,31 @@
+//----- THEORY
+// array.splice(index, toRemove, 'newItem1', 'newItem2');
+// INDEX - at what position start adding/removing
+// toRemove - the number of items to be removed
+// 'NewItemX' - the new item which will be added to the array
+
+//----- EXAMPLES -----
+
+//----- REMOVE ITEMS FROM THE ARRAY
+// FIRST WAY
+let parts = ["Case", "Procesor", "Motherboard", "RAM"];
+console.log(parts);
+parts.splice(2); // will return first two items from the array
+console.log('splice(2)', parts);
+
+console.log('----------------------------------');
+
+// SECOND WAY
+parts = ["Case", "Procesor", "Motherboard", "RAM"];
+console.log(parts);
+parts.splice(0, 2); // will remove first two items from the array
+console.log('splice(0, 2)', parts);
+
+console.log('----------------------------------');
+
+//----- ADD ITEMS TO THE ARRAY
+parts = ["Case", "Procesor", "Motherboard", "RAM"];
+console.log(parts);
+parts.splice(parts.length, 0, "SSD", "HDD");
+console.log(`splice(index, 0, "item1", "item2")`, parts);
+
