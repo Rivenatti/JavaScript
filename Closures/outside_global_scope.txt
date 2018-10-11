@@ -1,0 +1,9 @@
+const number = 1;
+
+const colorInfo = function() {
+	const color = "white";
+	return `Color: ${color}, number: ${number}`;
+}
+
+const getColor = colorInfo();
+console.log(getColor);

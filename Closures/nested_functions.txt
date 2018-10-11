@@ -1,0 +1,9 @@
+const add = function(a) {
+	let b = 10;
+	return function(c) {
+		return a + b + c;
+	}
+}
+
+const result = add(1)(2);
+console.log(result);

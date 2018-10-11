@@ -1,0 +1,7 @@
+function example(){
+      const inside = "inside";
+	return inside;
+}
+
+let outside = example();
+console.log(outside);

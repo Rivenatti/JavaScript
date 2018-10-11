@@ -1,0 +1,14 @@
+for (var i = 0; i < 3; i++){
+	setTimeout( () => {
+		console.log(i);
+	}, 1000);
+}
+
+console.log('after the loop');
+
+/*
+Result:
+i=0_f(c:i(3));
+i=1_f(c:i(3));
+i=2_f(c:i(3));
+*/
