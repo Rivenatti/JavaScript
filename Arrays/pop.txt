@@ -1,0 +1,6 @@
+// Pop method takes off last element from the array
+var cloths = ["Shirt", "Pants", "TShirt"];
+console.log("before", cloths);
+
+cloths.pop();
+console.log("after", cloths);

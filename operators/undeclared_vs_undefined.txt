@@ -1,0 +1,6 @@
+//----- UNDEFINED
+let b;
+console.log(b);
+
+//----- UNDECLARED
+console.log(a);

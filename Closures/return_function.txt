@@ -1,0 +1,14 @@
+function stopWatch() {
+	var startTime = Date.now() - 12;
+  
+	
+	function getDelay() {
+		var elapsedTime = Date.now() - startTime;
+        console.log(`Elapsed: ${elapsedTime} `);
+	}
+	
+	return getDelay();
+}
+
+
+stopWatch();

@@ -1,0 +1,6 @@
+// Push method adds on element/s to the end of the array
+var cloths = ["Shirt", "Pants", "TShirt"];
+console.log("before", cloths);
+
+cloths.push("Boots", "Hat");
+console.log("after", cloths);

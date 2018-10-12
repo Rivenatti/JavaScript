@@ -1,0 +1,6 @@
+// Unshift method adds on element/s at the beginning of the array
+var cloths = ["Shirt", "Pants", "TShirt"];
+console.log("before", cloths);
+
+cloths.unshift("Boots", "Hat");
+console.log("after", cloths);

@@ -1,0 +1,6 @@
+// Shift method takes off first element from the array
+var cloths = ["Shirt", "Pants", "TShirt"];
+console.log("before", cloths);
+
+cloths.shift();
+console.log("after", cloths);

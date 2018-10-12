@@ -1,0 +1,10 @@
+let person = {
+  name: "John",
+  age: "32"
+}
+
+console.log(person);
+
+delete person.name;
+
+console.log(person);

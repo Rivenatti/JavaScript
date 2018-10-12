@@ -1,0 +1,9 @@
+let fruit = {
+  name: "banana",
+  wage: 0.2,
+  calories: 30
+}
+
+for (let prop in fruit){
+  console.log(`${prop}: ${fruit[prop]}`);
+}
