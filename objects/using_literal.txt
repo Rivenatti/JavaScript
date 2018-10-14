@@ -1,0 +1,12 @@
+var employee = {
+	name : 'Nishant',
+	salary : 245678,
+	address : {
+		addressLine1 : 'BITS Pilani',
+		addressLine2 : 'Vidya Vihar'.
+		phoneNumber: {
+		  workPhone: 7098889765,
+		  homePhone: 1234567898
+		}
+	}
+}

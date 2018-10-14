@@ -1,0 +1,7 @@
+var person = {
+	name: 'Nishant',
+	age: 24
+}
+
+console.log('name' in person); // checking own property print true 
+console.log(person.hasOwnProperty('name')); // print true

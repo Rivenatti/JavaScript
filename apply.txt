@@ -1,0 +1,18 @@
+apply() is used when the number is not known. The function .apply() expects the argument to be an array.
+
+var someObject = {
+myProperty : 'Foo',
+
+myMethod : function(prefix, postfix) {
+
+	alert(prefix + this.myProperty + postfix);
+}
+};
+someObject.myMethod('<', '>'); // alerts '<Foo>'
+var someOtherObject  = {
+
+	myProperty : 'Bar'
+
+};
+
+someObject.myMethod.apply(someOtherObject, ['<', '>']); // alerts '<Bar>'

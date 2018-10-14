@@ -1,0 +1,5 @@
+var employee = new Object(); // Created employee object using new keywords and Object()
+employee.name = 'Nishant';
+employee.getName = function(){
+	return this.name;
+}

@@ -1,0 +1,39 @@
+// Normal function
+function increment(i){
+  return i + 1;
+}
+
+//----------------------------------------------
+
+// Function expression
+const increment = function(x){
+  return i + 1;
+}
+
+increment(i);
+
+//----------------------------------------------
+
+// IIFE - Immediately Invoked Function Expression
+
+// 1. way
+let i = 0;
+let j = 1;
+
+(function(i){
+  console.log(i + 1);
+})(j);
+
+// 2. way
+let i = 0;
+let j = 1;
+(function(i){
+  console.log(i + 1);
+}(j));
+
+// 3. way with ability to call function again later
+(greeting = function(name){
+  console.log("Hello " + name);
+})("Chris");
+
+greeting("John");

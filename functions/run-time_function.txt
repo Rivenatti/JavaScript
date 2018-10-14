@@ -1,0 +1,5 @@
+// Run-Time function declaration
+  foo(); // Call foo function here, It will give an error
+  var foo = function() {
+    console.log("Hi I am inside Foo");
+  };

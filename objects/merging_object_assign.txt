@@ -1,0 +1,14 @@
+var person = {
+	name : 'John',
+	age  : 24
+}
+
+var address = {
+	addressLine1 : 'Some Location x',
+	addressLine2 : 'Some Location y',
+	city : 'NewYork'
+}
+
+let newObj = Object.assign({}, person, address);
+
+console.log(newObj);

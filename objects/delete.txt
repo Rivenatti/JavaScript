@@ -1,0 +1,23 @@
+// Delete operator is used to delete a property from an object or an array (it doesn't affect local variables). 
+
+var x = { foo : 1};
+var output = (function() {
+  delete x.foo;
+  return x.foo;
+})();
+
+console.log(output); // undefined
+
+
+//----------------------------------------------------------------------
+// Delete operator doesn't delete prototype property.
+
+var Employee = {
+  company: 'xyz'
+}
+
+var emp1 = Object.create(Employee);
+delete emp1.company 		// won't work
+
+console.log(emp1.company); 	// xyz
+

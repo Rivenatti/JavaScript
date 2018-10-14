@@ -1,0 +1,7 @@
+var bar = true;
+console.log(bar + 0);  	    // 1 		(Boolean + Number -> Addition)
+console.log(bar + "xyz");   // "truexyz" 	(Boolean + String - > Concatenation)
+console.log(bar + true);    // 1 + 1 = 2	(Boolean + Boolean -> Addition)
+console.log(bar + false);   // 1 + 0 = 1	(Boolean + Boolean -> Addition)
+console.log(false + false); // 0 + 0 = 0	(Boolean + Boolean -> Addition)
+

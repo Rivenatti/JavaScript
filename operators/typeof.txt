@@ -1,0 +1,7 @@
+The typeof operator checks if a value belongs to one of the seven basic types: number, string, boolean, object, function, undefined or Symbol.
+
+let number = 20;
+console.log(typeof number === "number");
+
+let str = "hello"
+console.log(typeof str === "string");

@@ -1,0 +1,17 @@
+call() is used when the number of the function's arguments are known to the programmer, as they have to be mentioned as arguments in the call statement.
+
+var someObject = {
+myProperty : 'Foo',
+
+myMethod : function(prefix, postfix) {
+
+	alert(prefix + this.myProperty + postfix);
+}
+};
+someObject.myMethod('<', '>'); // alerts '<Foo>'
+var someOtherObject  = {
+
+	myProperty : 'Bar'
+
+};
+someObject.myMethod.call(someOtherObject, '<', '>'); // alerts '<Bar>'
