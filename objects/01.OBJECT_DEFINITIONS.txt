@@ -1,0 +1,65 @@
+Booleans can be objects (if defined with the new keyword)
+
+let bol = true;
+console.log(typeof bol); 	// boolean
+
+let newBol = new Boolean(false);
+console.log(typeof newBol);	// object
+
+//--------------------------------------------------------
+Numbers can be objects (if defined with the new keyword)
+
+let num = 123;
+console.log(typeof num);    	// number
+
+let newNum = new Number(132);
+console.log(typeof newNum); 	// object
+
+//--------------------------------------------------------
+Strings can be objects (if defined with the new keyword)
+
+let str = "hi";
+console.log(typeof str);    	// string
+
+let newStr = new String("hello");
+console.log(typeof newStr); 	// object
+
+//--------------------------------------------------------
+Dates are always objects
+
+let today = new Date();
+console.log(typeof today);	// object
+
+//--------------------------------------------------------
+Maths are always objects
+
+console.log(typeof Math);	// object
+
+//--------------------------------------------------------
+Regular expressions are always objects
+
+console.log(typeof RegExp());	// object
+
+//--------------------------------------------------------
+Arrays are always objects
+
+console.log(typeof []);		// object
+
+//--------------------------------------------------------
+null is always an object
+
+console.log(typeof null);	// object
+
+//--------------------------------------------------------
+Objects are alway objects
+
+let obj = new Object();
+console.log(typeof obj);	// object
+
+//--------------------------------------------------------
+Functions are always objects
+
+let func = new Function();
+console.log(func);		// function
+
+The typeof operator in JavaScript returns "function" for functions, but functions can best be described as objects. That is, because JavaScript functions have both properties and methods.

@@ -1,0 +1,23 @@
+The .bind() creates a new function that will have "this" set to the first parameter passed to bind().
+
+// ------------------------ EXAMPLES --------------------------
+
+// 1.
+let person = {name: "Julia"}
+
+function showName(){ return this.name; }
+
+console.log(showName());              // this = window.name
+console.log(showName.bind(person)()); // this = person.name
+
+
+
+
+
+// 2.
+
+function greeting(name){
+  console.log(`Hello, ${name}.`);
+}
+
+greeting.bind(null, "Julia")();

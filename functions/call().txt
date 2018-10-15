@@ -1,0 +1,30 @@
+The .call() method is a predefined JavaScript method. It can be used to invoke a method with an owner object as an argument.
+
+The .call() is used when the number of the function's arguments are known to the programmer, as they have to be mentioned as arguments in the call statement.
+
+The call() method takes arguments separately.
+
+// ------------------------ EXAMPLE --------------------------
+
+// define global variable
+let score = 0;
+
+// create function which returns the score with given arguments
+function updateScore() {
+	for(let i = 0; i < arguments.length; i++){
+      score += arguments[i];
+    }
+  return score;
+}
+
+// create an object
+let game = {
+  name: 'soccer',
+  score: 0
+}
+
+// call updateScore function to game object
+updateScore.call(game, 4, 4, 4);
+
+console.log(score);
+

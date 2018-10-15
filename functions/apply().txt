@@ -1,0 +1,27 @@
+The apply() method is a predefined JavaScript method. It can be used to invoke a method with an owner object as an argument.
+
+The function .apply() expects the argument to be an array.(!!!)
+
+// ------------------------ EXAMPLE --------------------------
+
+// define global variable
+let score = 0;
+
+// create function which returns the score with given arguments
+function updateScore() {
+	for(let i = 0; i < arguments.length; i++){
+      score += arguments[i];
+    }
+  return score;
+}
+
+// create an object
+let game = {
+  name: 'soccer',
+  score: 0
+}
+
+// apply updateScore function to game object
+updateScore.apply(game, [5,5,5]);
+
+console.log(score);

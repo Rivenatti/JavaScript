@@ -1,0 +1,57 @@
+// Adding or changing an object property
+Object.defineProperty(object, propertyName, descriptor);
+
+// Adding or changing many object properties
+Object.defineProperties(object, properties);
+
+// Accessing properties
+Object.getOwnPropertyDescriptor(object, property);
+
+// Returns all properties as an array
+Object.getOwnPropertyNames(object);
+
+// Returns all enumerable properties as an array
+Object.keys(object);
+
+// Returns all enumerable properties values as an array
+Object.values(object);
+
+// Accessing the prototype
+Object.getPrototypeOf(object);
+
+// Returns true or false if an object has given property or not
+object.hasOwnProperty(property);
+
+// Returns true or false if an object property is enumerable or not
+object.propertyIsEnumerable(property);
+
+
+
+
+//-------------------- OBJECTS CAN BE ---------------------------
+
+//* Extensible - new properties can be added to an object.
+Object.isExtensible(object);
+
+// Prevents adding properties to an object
+Object.preventExtensions(object);
+
+//---------------------------------------------------------------
+//* Frozen - prevents any change to an object properties (not affecting values).
+
+Object.freeze(object);
+
+Object.isFrozen(object);
+
+
+//---------------------------------------------------------------
+//* Sealed - properties can't be deleted or configured buy are still writable.
+
+Object.seal(object);
+
+Object.isSealed(object);
+
+//---------------------- OBJECT PROPERTIES CAN BE ---------------
+//* writabe 	 - property value can be changed;
+//* enumerable 	 - property can be enumeratec (seen through a for...in loop);
+//* configurable - property can be reconfigured;
