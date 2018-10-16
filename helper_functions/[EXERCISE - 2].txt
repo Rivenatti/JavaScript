@@ -1,0 +1,53 @@
+/* Task: 
+Using songs arrays given below get a string separated by commas with all the songs that have
+a duration superior to 4 minutes:
+*/
+
+const spotifySongs = [
+  { id: 1, name: "Curl of the Burl", 	duration: 204 },
+  { id: 2, name: "Oblivion", 		duration: 306 },
+  { id: 3, name: "Flying Whales", 	duration: 444 },
+  { id: 4, name: "L'Enfan Sauvage", 	duration: 246 }
+];
+
+const lastFmSongs= [
+  { id: 5, name: "Chop Suey", 		duration: 192 },
+  { id: 6, name: "Throne", 		duration: 186 },
+  { id: 7, name: "Destrier", 		duration: 132 },
+  { id: 8, name: "Out of the Black", 	duration: 240 }
+];
+
+const allSongs = [spotifySongs, lastFmSongs];
+
+// -----------------------------------   SOLUTION ----------------------------------
+
+const songs = allSongs
+  .reduce( (acc, song) => {
+    return acc.concat(song);
+  }, [])
+  .filter( song => song.duration > 240)
+  .map( song =>  song.name)
+  .toString();
+
+console.log(songs);
+
+// ----------------------------------- STEP BY STEP --------------------------------
+
+// Reduce allSongs array to single array
+const songs = allSongs.reduce( (acc, song) => {
+  return acc.concat(song);
+}, []);
+
+console.log("reduced", songs);
+
+// Filter songs array to get songs longer than 4 minutes (240 seconds)
+const songsFiltered = songs.filter( song => song.duration > 240);
+console.log("filtered", songsFiltered);
+
+// Map filtered songs array to new array containing only song names
+const songsArray = songsFiltered.map( song => song.name);
+console.log("names", songsArray);
+
+// Now create the string
+let songsStr = songsArray.toString();
+console.log("string: ", songsStr);

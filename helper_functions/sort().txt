@@ -1,0 +1,38 @@
+//----------------------------- THEORY  ----------------------------------
+The sort() method sorts the items of an array.
+
+The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down). 
+
+By default, the sort() method sorts the values as strings in alphabetical and ascending order.
+
+(!!!) However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". You can fix this by providing a "compare function".
+
+//--------------------------  ARRAY EXAMPLE ----------------------------------
+
+let numbers = [1, 5, 123, 125, 65, 16, 676, 3435, 634];
+
+console.log(numbers.sort( (a, b) => a - b));	// ascending
+console.log(numbers.sort( (a, b) => b - a));	// descending
+
+//-------------------------- OBJECT EXAMPLE ----------------------------------
+
+const products = [
+  {name: 'apple',       category: 'fruit',     quantity: 12, price: 1.2},
+  {name: 'banana',      category: 'fruit',     quantity: 24, price: 2 },
+  {name: 'carrot',      category: 'vegetable', quantity: 8,  price: 1.7},
+  {name: 'pepper',      category: 'vegetable', quantity: 15, price: 2.5},
+  {name: 'screwdriver', category: 'tools',     quantity: 3,  price: 4   },
+  {name: 'chair',       category: 'furniture', quantity: 8,  price: 18  },
+];
+
+// sort products by name [a-z]
+let nameSorted = products.sort();
+console.log(nameSorted);
+
+// sort products ascending by price
+let priceSorted = products.sort( (a, b) => a.price > b.price ? 1 : -1);
+console.log(priceSorted);
+
+// sort products descending by quantity
+let quantitySorted = products.sort( (a, b) => a.quantity < b.quantity ? 1 : -1);
+console.log(quantitySorted);

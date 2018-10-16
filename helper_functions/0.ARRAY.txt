@@ -1,0 +1,8 @@
+const products = [
+  {name: 'apple',       category: 'fruit',     quantity: 12, price: 1.2},
+  {name: 'banana',      category: 'fruit',     quantity: 24, price: 2 },
+  {name: 'carrot',      category: 'vegetable', quantity: 8,  price: 1.7},
+  {name: 'pepper',      category: 'vegetable', quantity: 15, price: 2.5},
+  {name: 'screwdriver', category: 'tools',     quantity: 3,  price: 4   },
+  {name: 'chair',       category: 'furniture', quantity: 8,  price: 18  },
+];

@@ -1,0 +1,27 @@
+//----------------------------- THEORY  ----------------------------------
+The filter() method CREATES A NEW ARRAY(!!!) filled with all array elements that pass a test (provided as a function). 
+It doesn't execute the function for array elements without values. (!!!)
+It doesn't change the original array. (!!!)
+
+//----------------------------- EXAMPLE ----------------------------------
+
+const products = [
+  {name: 'apple',       category: 'fruit',     quantity: 12, price: 1.2},
+  {name: 'banana',      category: 'fruit',     quantity: 24, price: 2 },
+  {name: 'carrot',      category: 'vegetable', quantity: 8,  price: 1.7},
+  {name: 'pepper',      category: 'vegetable', quantity: 15, price: 2.5},
+  {name: 'screwdriver', category: 'tools',     quantity: 3,  price: 4   },
+  {name: 'chair',       category: 'furniture', quantity: 8,  price: 18  },
+];
+
+// filter products which price is under 2
+let cheapProducts = products.filter( (product) =>  product.price < 2 );
+console.log(cheapProducts);
+
+// filter products which category is "vegetable"
+let vegetables = products.filter( (product) => product.category === "vegetable");
+console.log(vegetables);
+
+// filter products which total price is over 20
+let total = products.filter( (product) => product.quantity * product.price > 20);
+console.log(total);

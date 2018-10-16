@@ -1,0 +1,50 @@
+/* Task: 
+Using products object array given below:
+  1) use .map() to create new object array containing only name, quantity and price, then
+  2) use .filter() on that array, to get object array with prices over than 2, then
+  3) use .sort() on that array, to sort quantity in descending order, then
+  4) use .reduce() on that array to get sum of total price
+*/
+
+const products = [
+  {name: 'apple',       category: 'fruit',     quantity: 12, price: 1.2},
+  {name: 'banana',      category: 'fruit',     quantity: 24, price: 2 },
+  {name: 'carrot',      category: 'vegetable', quantity: 8,  price: 1.7},
+  {name: 'pepper',      category: 'vegetable', quantity: 15, price: 2.5},
+  {name: 'screwdriver', category: 'tools',     quantity: 3,  price: 4   },
+  {name: 'chair',       category: 'furniture', quantity: 8,  price: 18  },
+];
+
+// -----------------------------------   SOLUTION ----------------------------------
+
+let newProducts = products.map( (product) => {
+  return {name: product.name, quantity: product.quantity, price: product.price};
+})
+ .filter( (product) => product.price > 2)
+ .sort( (a, b) => a.quantity < b.quantity)
+ .reduce( (acc, product) => acc + (product.quantity * product.price) , 0);
+console.log(newProducts);
+
+// ----------------------------------- STEP BY STEP --------------------------------
+
+// 1.
+
+let newProducts = products.map( (product) => {
+  return {name: product.name, quantity: product.quantity, price: product.price}
+});
+console.log(newProducts);
+
+// 2.
+
+let filteredProducts = newProducts.filter( (product) => product.price > 2);
+console.log("filtered", filteredProducts);
+
+// 3.
+
+let sortedProducts = filteredProducts.sort( (a, b) => a.quantity < b.quantity);
+console.log("sorted", sortedProducts);
+
+// 4.
+
+let reducedProducts = sortedProducts.reduce( (acc, product) => acc + (product.quantity * product.price) , 0);
+console.log("reduced", reducedProducts);
