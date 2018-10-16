@@ -1,0 +1,22 @@
+//----------------------------- THEORY  ----------------------------------
+The some() method tests whether at least one element in the array passes the test implemented by the provided function.
+
+The some() method executes the function once for each element present in the array:
+if it finds an array element where the function returns a true value, some() returns true (and does not check the remaining values),
+otherwise it returns false.
+
+It doesn't execute the function for array elements without values. (!!!)
+It doesn't change the original array. (!!!)
+
+//----------------------------- EXAMPLE ----------------------------------
+
+let users = [
+  {name: "John", age: 20},
+  {name: "Ann", age: 19},
+  {name: "Kate", age: 18},
+  {name: "Chris", age: 17},
+]
+
+console.log(
+  users.some( user => user.age < 18)
+);

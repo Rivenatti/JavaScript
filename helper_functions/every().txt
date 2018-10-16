@@ -1,0 +1,22 @@
+//----------------------------- THEORY  ----------------------------------
+The every() method checks if all elements in an array pass a test (provided as a function).
+
+The every() method executes the function once for each element present in the array:
+if it finds an array element where the function returns a false value, every() returns false (and does not check the remaining values),
+if no false occur, every() returns true.
+
+It doesn't execute the function for array elements without values. (!!!)
+It doesn't change the original array. (!!!)
+
+//----------------------------- EXAMPLE ----------------------------------
+
+let users = [
+  {name: "John", age: 20},
+  {name: "Ann", age: 19},
+  {name: "Kate", age: 18},
+  {name: "Chris", age: 17},
+]
+
+console.log(
+  users.every( user => user.age >= 16)
+);
