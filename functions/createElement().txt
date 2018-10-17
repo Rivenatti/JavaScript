@@ -1,0 +1,7 @@
+//----------------------------- THEORY  ----------------------------------
+The createElement() method creates an Element Node with the specified name.
+
+//----------------------------- EXAMPLE ----------------------------------
+
+let newInput = document.createElement('input');
+document.body.appendChild(newInput);

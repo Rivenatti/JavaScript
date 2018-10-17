@@ -1,0 +1,27 @@
+//----------------------------- THEORY  ----------------------------------
+The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+This function is only executed once.
+The clearTimeout() method can prevent the setTimeout() execution.
+
+//----------------------------- EXAMPLE ----------------------------------
+
+// 1.
+
+setTimeout( () => {
+  console.log("3 seconds have passed");
+}, 3000);
+
+// 2. 
+
+let myTimeout = setTimeout(time, 1000);
+
+function time () {
+  console.log("timeout");
+};
+
+function preventTimeout() {
+    clearInterval(myTimeout);
+  console.log("Timeout prevented");
+}
+
+preventTimeout();

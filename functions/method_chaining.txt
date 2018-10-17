@@ -1,0 +1,21 @@
+let obj = function() {
+  this.num = 0;
+  
+  this.inc = function(n){
+    this.num += n;
+    console.log(this.num);
+    return this;
+  }
+  
+  this.dec = function(n){
+    this.num -= n;
+    return this;
+  }
+  
+  this.show = function(){
+    console.log(this.num);
+  }
+}
+
+let a = new obj();
+a.inc(2).dec(3).show();

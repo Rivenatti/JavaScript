@@ -1,0 +1,30 @@
+//----------------------------- THEORY  ----------------------------------
+The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+It will continue calling the function until clearInterval() is called, or the window is closed.
+The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+The clearInterval() method can prevent the setInterval() execution.
+
+//----------------------------- EXAMPLE ----------------------------------
+
+// 1.
+
+setInterval(() => {
+    let seconds = new Date().toLocaleTimeString().slice(6);
+    console.log(seconds);
+}, 1000);
+
+
+// 2.
+let myInterval = setInterval(getSeconds, 1000);
+
+function getSeconds() {
+    let seconds = new Date().toLocaleTimeString().slice(6);
+    console.log(seconds);
+}
+
+function preventInterval() {
+    clearInterval(myInterval);
+  console.log("Interval prevented");
+}
+
+preventInterval();

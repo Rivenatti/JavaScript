@@ -1,0 +1,7 @@
+//----------------------------- THEORY  ----------------------------------
+The createTextNode() method creates a Text Node with the specified text.
+
+//----------------------------- EXAMPLE ----------------------------------
+
+let textNode = document.createTextNode("Hello");
+document.body.appendChild(textNode);
