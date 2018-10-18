@@ -1,0 +1,46 @@
+// Strings are passed by value - copied
+
+let str1 = "hello"
+let str2 = str1;
+str2 = "bye";
+console.log(str1) // "hello"
+
+//--------------------------------------------------
+
+// Object properties are passed by reference
+
+let obj1 = { a: 1 };
+let obj2 = obj1;
+obj2.a = 2;
+console.log(obj1); // { a: 2};
+
+//--------------------------------------------------
+
+// Object reassign doesn't affect object pointer;
+
+let obj1 = { a: 1 };
+let obj2 = obj1;
+obj2 = { b: 2 };
+console.log(obj1); // { a: 1 };
+console.log(obj2); // { b: 2 };
+
+//--------------------------------------------------
+
+// Arrays variables are passed by reference
+
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+arr2[0] = 12;
+console.log(arr1); // [12, 2, 3]
+
+//--------------------------------------------------
+
+// Array reassign doesn't affect array pointer;
+
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+arr2 = [4, 5, 6];
+console.log(arr1);
+
+console.log(arr1); // [1, 2, 3]
+console.log(arr2); // [4, 5, 6]

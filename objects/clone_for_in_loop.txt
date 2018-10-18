@@ -1,0 +1,25 @@
+object = {
+	name : 'Nishant',
+	address : {
+	  location: 'xyz',
+	  zip : '123456',
+	  phoneNumber : {
+	    homePhone: 8797912345,
+	    workPhone : 1234509876
+	  }
+	}
+};
+
+
+copiedObject = clone(object);
+
+function clone(obj){
+  let cloned = {};
+  for(let i in obj){
+    cloned[i] = obj[i];
+  }
+  return cloned;
+}
+
+
+console.log(copiedObject);

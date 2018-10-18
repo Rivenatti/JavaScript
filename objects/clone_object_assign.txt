@@ -1,0 +1,15 @@
+object = {
+	name : 'Nishant',
+	address : {
+	  location: 'xyz',
+	  zip : '123456',
+	  phoneNumber : {
+	    homePhone: 8797912345,
+	    workPhone : 1234509876
+	  }
+	}
+};
+
+copiedObject = Object.assign({}, object);
+
+console.log(copiedObject);
