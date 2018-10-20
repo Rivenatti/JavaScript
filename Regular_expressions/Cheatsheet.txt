@@ -25,3 +25,39 @@ Minimum eight and maximum 10 characters, at least one uppercase letter, one lowe
 //------------- EMAIL (SIMPLE)-------------
 
 /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+
+
+//------------- NUMERIC INPUT -------------
+
+Any positive number:	
+/^\d+$/
+
+
+Decimal numbers:
+/^\d*\.\d+$/
+
+
+Any positive decimal number:
+/^\d*(\.\d+)?$/
+
+
+Positive or negative number with optional decimal
+^-?[0-9]\d*(\.\d+)?$
+
+
+
+//------------- URL -------------
+
+Protocol optional
+/(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ 
+
+Including protocol
+/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
+
+
+
+//------------- TIME -------------
+
+24h format: hh:mm:ss 
+/(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/
